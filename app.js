@@ -11,6 +11,10 @@ app.get("/", (req, res)=>{
     res.sendFile(path.join(publicPath, 'index.html'))
 })
 
+app.get("/p5", (req, res)=>{
+    res.sendFile(path.join(publicPath, 'p5.html'))
+})
+
 app.listen(port, (err)=>{
     if (err) {
         console.log(err)
