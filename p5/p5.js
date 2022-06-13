@@ -1,9 +1,9 @@
-function setup(){
-    createCanvas(400, 400, WEBGL)
+function setup() {
+    createCanvas(710, 400, WEBGL);
 }
 
-function draw(){
-    background(250)
+function draw() {
+    background(250);
     rotateY(frameCount * 0.01);
 
     for (let j = 0; j < 5; j++) {
