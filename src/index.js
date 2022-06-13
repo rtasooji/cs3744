@@ -1,6 +1,9 @@
 import CreateRoot from 'react-dom/client'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 // import * as ReactDOM from 'react-dom'
-import App from './App'
+import Page from './Components/Page'
+import {NasaClass} from "./Components/Nasa"
+import MyMain from "./Components/Main";
 
 
 const domRoot = document.getElementById('root')
@@ -8,5 +11,13 @@ const domRoot = document.getElementById('root')
 
 const root = CreateRoot.createRoot(domRoot)
 root.render(
-    <App/>
+    <BrowserRouter>
+        <Routes>
+            <Route path={'/'} element={<Page />}>
+                <Route index element={<MyMain/>}/>
+                <Route path={"/projects"} element={<NasaClass />}/>
+            </Route>
+
+        </Routes>
+    </BrowserRouter>
 )
