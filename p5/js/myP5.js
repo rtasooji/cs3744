@@ -7,7 +7,7 @@ let dirX = 1
 let easing = 0.1
 let angle = 0
 let myDots = []
-let myDots2 = []
+
 function setup(){
     let canvas = createCanvas(500, 500)
     canvas.parent("canvasContainer")
@@ -17,10 +17,6 @@ function setup(){
         let myDot = new MyDot(sin(i)*5, 10*i, 5, 5)
         myDot.render()
         myDots.push(myDot)
-
-        let myDot2 = new MyDot(10*i,sin(i)*5, 5, 5)
-        myDot.render()
-        myDots.push(myDot2)
 
     }
     // ortho(-width / 2, width / 2, height / 2, -height / 2, 0, 500);
@@ -146,7 +142,6 @@ class MyDot {
 }
 function draw(){
     background(100)
-    let counter = 1
     myDots.map(dot=>{
         dot.render()
     })

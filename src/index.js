@@ -19,7 +19,6 @@ root.render(
                 <Route path={"/projects"} element={<NasaClass />}/>
                 <Route path={"/p5"} element={<P5Sketch/>}/>
             </Route>
-
         </Routes>
     </BrowserRouter>
 )
