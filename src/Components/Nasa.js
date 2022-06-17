@@ -5,6 +5,7 @@ class NasaClass extends Component {
         super(props);
 
         this.state = {description: "", url: ""}
+
     }
 
     updateState = (desc, url) => {
@@ -34,6 +35,7 @@ class NasaClass extends Component {
 function NasaFunction(){
     const[desc, setDesc] = useState("")
     const[url, setUrl] = useState("")
+
     const getImage = () => {
         const api = "MZwupgqfb2TSs5fb582TMbtyLSfhqy5CBiJRdzGB"
         const url = `https://api.nasa.gov/planetary/apod?api_key=${api}`

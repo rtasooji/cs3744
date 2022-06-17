@@ -12,7 +12,7 @@ app.get("/", (req, res)=>{
     res.sendFile(path.join(publicPath, 'index.html'))
 })
 
-app.get("/p5", (req, res)=>{
+app.get("/p5/2", (req, res)=>{
     res.sendFile(path.join(p5Path, 'p5.html'))
 })
 

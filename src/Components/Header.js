@@ -28,7 +28,7 @@ function Header() {
     return(
         <header>
             <nav>
-                {tabsValue.map((element, idx) => <Tabs name={element} link={tabsLink[idx]}/>)}
+                {tabsValue.map((element, idx) => <Tabs name={element} link={tabsLink[idx]} key={idx}/>)}
             </nav>
         </header>
     )

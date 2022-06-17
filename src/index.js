@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Page from './Components/Page'
 import {NasaClass} from "./Components/Nasa"
 import MyMain from "./Components/Main";
+import P5Sketch from "./Components/Sketch1";
 
 
 const domRoot = document.getElementById('root')
@@ -16,6 +17,7 @@ root.render(
             <Route path={'/'} element={<Page />}>
                 <Route index element={<MyMain/>}/>
                 <Route path={"/projects"} element={<NasaClass />}/>
+                <Route path={"/p5"} element={<P5Sketch/>}/>
             </Route>
 
         </Routes>
