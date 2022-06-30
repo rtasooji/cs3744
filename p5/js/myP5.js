@@ -140,11 +140,20 @@ class MyDot {
         }
     }
 }
+
+function Box(){
+    push()
+    translate(100, 0)
+    ellipse(5, 5, 10, 10)
+    pop()
+    translate(10, 10)
+    ellipse(5, 5, 10, 10)
+
+}
+
 function draw(){
     background(100)
-    myDots.map(dot=>{
-        dot.render()
-    })
+    Box()
     // drawEllipse(10, 1)
     // drawEllipse(20, 1)
 

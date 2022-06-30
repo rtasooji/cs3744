@@ -10,8 +10,6 @@ import LoadingComp from "./Components/LoadingComp";
 import NotFound from "./Components/404";
 import D3Comp from "./Components/ChartCompQ";
 import LetterCounter from "./Components/counter";
-import FinalExam from "./Components/Exam";
-import FinalExampleFunc from "./Components/Exam";
 
 
 const domRoot = document.getElementById('root')
@@ -19,9 +17,10 @@ const domRoot = document.getElementById('root')
 
 const root = CreateRoot.createRoot(domRoot)
 
+
 let inputData = {
     result: [[
-         {
+        {
             "coord": [
                 2,
                 4
@@ -194,18 +193,9 @@ root.render(
     <BrowserRouter>
         <Routes>
             <Route path={'/'} element={<Page />}>
-                <Route index element={<MyMain/>}/>
-                <Route path={"/projects"} element={<NasaClass />}/>
-                <Route path={"/p5"}>
-                    <Route index element={<P5Sketch/>} />
-                    <Route path={"*"}  element={<NotFound />} />
-                </Route>
-                <Route path={"/d3"} element={<D3Comp width={600}
-                                                     height={300}
-                                                     data={inputData.result}/>}/>
-                <Route path={"/count"} element={<LetterCounter />}/>
-                <Route path={"/exam"}  element={<FinalExampleFunc />} />
-                <Route path={"/*"} element={<NotFound />} />
+                ....
+                <Route path={"/d3"} element={<D3Comp CORRECTLY_PASS_PROPS_TO_D3COMP/>}/>
+                ....
             </Route>
         </Routes>
     </BrowserRouter>
