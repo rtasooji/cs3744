@@ -17,7 +17,6 @@ const domRoot = document.getElementById('root')
 
 const root = CreateRoot.createRoot(domRoot)
 
-
 let inputData = {
     result: [[
         {

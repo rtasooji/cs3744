@@ -12,12 +12,15 @@ import D3Comp from "./Components/ChartCompQ";
 import LetterCounter from "./Components/counter";
 import FinalExam from "./Components/Exam";
 import FinalExampleFunc from "./Components/Exam";
+import YahooFinance from "./Components/Finance";
 
+let data = require('./rsc/finance.json')
 
 const domRoot = document.getElementById('root')
 // ReactDOM.render(<App/>, domRoot)
 
 const root = CreateRoot.createRoot(domRoot)
+console.log(data)
 
 let inputData = {
     result: [[
@@ -205,6 +208,7 @@ root.render(
                                                      data={inputData.result}/>}/>
                 <Route path={"/count"} element={<LetterCounter />}/>
                 <Route path={"/exam"}  element={<FinalExampleFunc />} />
+                <Route path={"/finance"} element={<YahooFinance data={data}/>}/>
                 <Route path={"/*"} element={<NotFound />} />
             </Route>
         </Routes>
